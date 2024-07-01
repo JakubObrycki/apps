@@ -8,6 +8,11 @@ pipeline {
             }
         }
     stage('Build') {
+        agent {
+            docker {
+                image 'python:3.8.19-alpine'
+            }
+        }
             steps {
                 sh 'ls -la'
                 sh 'python3 main.py' 
