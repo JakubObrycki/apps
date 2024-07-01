@@ -15,9 +15,11 @@ pipeline {
             }
         }
             steps {
-                sh 'pip install kivy'
-                sh 'python3 main.py' 
-
+                sh '''
+                    pip install kivy
+                    pip install --upgrade pip
+                    python3 main.py
+                '''
             }
         }
     }
