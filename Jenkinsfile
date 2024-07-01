@@ -11,11 +11,13 @@ pipeline {
         agent {
             docker {
                 image 'python:3.8.19-alpine'
+                reuseNode true
             }
         }
             steps {
-                sh 'ls -la'
+                sh 'pip install kivy'
                 sh 'python3 main.py' 
+
             }
         }
     }
