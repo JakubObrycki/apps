@@ -11,6 +11,7 @@ pipeline {
         agent{
             docker{
                 image "python:3.8.19-alpine"
+                reuseNode true
             }
         }
             steps {
