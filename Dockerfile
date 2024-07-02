@@ -1,3 +1,3 @@
-FROM python:3.8.19-alpine
+FROM python:3.10-alpine
 RUN pip install kivy
-RUN python main.py
+RUN python3 main.py
