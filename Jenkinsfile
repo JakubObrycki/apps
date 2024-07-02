@@ -16,9 +16,7 @@ pipeline {
         }
             steps {
                 sh '''
-                    apt-get install python3 -y
                     python --version
-                    python -m venv kivy_venv
                     python3 main.py
                 '''
                 //docker build -t my-app .
