@@ -17,6 +17,7 @@ pipeline {
             steps {
                 sh '''
                     python --version
+                    pip install --upgrade pip
                     pip --version
                     python -m venv kivy_venv
                     pip install kivy:2.3.0
