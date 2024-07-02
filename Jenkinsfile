@@ -11,7 +11,8 @@ pipeline {
       
             steps {
                 sh '''
-                   docker build -t my-app .
+                    python --version
+                    docker build -t my-app .
                 '''
             }
         }
