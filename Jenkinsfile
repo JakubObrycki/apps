@@ -17,6 +17,7 @@ pipeline {
             steps {
                 sh '''
                     python --version
+                    pip --version
                     python -m venv kivy_venv
                     pip install kivy
                     python3 main.py
