@@ -8,11 +8,19 @@ pipeline {
             }
         }
     stage('Build') {
-        
+        agent{
+            docker{
+                image "python:3.8.19-alpine"
+            }
+        }
             steps {
                 sh '''
-                    docker build -t my-apps .
+                    pip install kivy 
+                    apt-get update kivy 
+                    apt-get install python3 -y
+                    python3 main.py
                 '''
+                //docker build -t my-apps .
             }
         }
     }
