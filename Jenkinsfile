@@ -16,7 +16,8 @@ pipeline {
         }
             steps {
                 sh '''
-                    apt-get update kivy 
+                    pip install --upgrade pip
+                    apt-get update kivy
                     pip install kivy 
                     python main.py
                 '''
