@@ -8,13 +8,21 @@ pipeline {
             }
         }
     stage('Build') {
-      
+        agent {
+            docker {
+                image python:3.10-alpine
+                reuseNode true
+                args '-u root:root'
+            }
+        }
             steps {
                 sh '''
-                    sudo apt-get install python3 -y
+                    apt-get install python3 -y
                     python --version
-                    docker build -t my-app .
+                    python -m venv kivy_venv
+                    python3 main.py
                 '''
+                //docker build -t my-app .
             }
         }
     }
