@@ -8,12 +8,7 @@ pipeline {
             }
         }
     stage('Build') {
-        agent{
-            docker{
-                image "python:3.8.19-alpine"
-                reuseNode true
-            }
-        }
+      
             steps {
                 sh '''
                    docker build -t my-app .
