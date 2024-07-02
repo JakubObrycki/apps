@@ -16,10 +16,10 @@ pipeline {
         }
             steps {
                 sh '''
-                    pip install --upgrade pip
                     pip --version
+                    pip install --upgrade pip
                     python3 -m venv kivy_venv
-                    pip install kivy:2.3.0
+                    pip install kivy
                     python3 main.py
                 '''
                 //docker build -t my-app .
