@@ -11,7 +11,7 @@ pipeline {
       
             steps {
                 sh '''
-                    apt-get install python3 -y
+                    sudo apt-get install python3 -y
                     python --version
                     docker build -t my-app .
                 '''
