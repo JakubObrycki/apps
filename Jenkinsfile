@@ -19,7 +19,7 @@ pipeline {
                     python --version
                     pip --version
                     python -m venv kivy_venv
-                    pip install kivy
+                    pip install kivy:2.3.0
                     python3 main.py
                 '''
                 //docker build -t my-app .
