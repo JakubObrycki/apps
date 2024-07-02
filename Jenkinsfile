@@ -15,9 +15,8 @@ pipeline {
         }
             steps {
                 sh '''
-                    pip install kivy 
+                    pip3 install kivy 
                     apt-get update kivy 
-                    apt-get install python3 -y
                     python3 main.py
                 '''
                 //docker build -t my-apps .
