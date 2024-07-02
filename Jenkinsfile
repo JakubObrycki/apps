@@ -16,7 +16,6 @@ pipeline {
         }
             steps {
                 sh '''
-                    python --version
                     pip install --upgrade pip
                     pip --version
                     python -m venv kivy_venv
