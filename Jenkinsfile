@@ -22,8 +22,6 @@ pipeline {
                     pip install kivy
                     python3 main.py
                 '''
-                //docker build -t my-app .
-            }
         }
     }
 }
